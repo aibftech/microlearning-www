@@ -1,0 +1,69 @@
+# ============================================================
+# .gitignore — sito-presentazione (sito statico HTML/CSS/JS)
+# ============================================================
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Environment / credenziali (MAI committare)
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Eventuali build / preprocessor (se in futuro si introduce un build step)
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+out/
+
+# File temporanei / backup
+*.bak
+*.backup
+*.tmp
+*.orig
+*.rej
+
+# Pacchetti compressi locali
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# File specifici
+.history/
+.firebase/
+.netlify/
+.vercel/
