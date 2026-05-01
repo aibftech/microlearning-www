@@ -113,8 +113,19 @@
       <h2>Lascia i tuoi dati</h2>
       <p>Ti ricontattiamo entro 24h lavorative.</p>
 
-      <div class="form-success" id="form-success">
-        <strong>✓ Richiesta inviata.</strong> Ti scriviamo a brevissimo per fissare la call.
+      <div class="form-success" id="form-success" role="status" aria-live="polite" tabindex="-1">
+        <div class="form-success-icon" aria-hidden="true">
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <h3>Grazie<span class="success-name"></span>, ci sentiamo presto.</h3>
+        <p class="form-success-lead">La tua richiesta è arrivata. Ti rispondiamo entro <strong>24 ore lavorative</strong> per fissare la call.</p>
+        <p class="form-success-tip">Dovresti aver ricevuto subito una mail di conferma dalla nostra casella — se non la vedi, dai un'occhiata anche nello spam.</p>
+        <div class="form-success-actions">
+          <a href="index.html#faq" class="btn btn-secondary btn-sm">Leggi le FAQ</a>
+          <a href="index.html" class="btn btn-secondary btn-sm">Torna alla home</a>
+        </div>
       </div>
 
       <form id="demo-form"

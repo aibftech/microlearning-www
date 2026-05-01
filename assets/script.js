@@ -153,6 +153,11 @@
         submitBtn.textContent = 'Invio in corso…';
       }
 
+      // Cattura il nome PRIMA del reset, per personalizzare il messaggio
+      const nameField = demoForm.querySelector('#name');
+      const fullName = nameField ? nameField.value.trim() : '';
+      const firstName = fullName.split(/\s+/)[0] || '';
+
       try {
         const formData = new FormData(demoForm);
         const response = await fetch(demoForm.action, {
@@ -162,12 +167,29 @@
         });
 
         if (response.ok) {
-          demoForm.reset();
-          const success = demoForm.querySelector('.form-success');
+          // 1. Cerca pannello success (potrebbe essere fuori dal form, dentro .form-wrap)
+          const wrap = demoForm.closest('.form-wrap');
+          const success = (wrap || document).querySelector('.form-success');
+
+          // 2. Personalizza con il nome
+          if (success) {
+            const nameSpan = success.querySelector('.success-name');
+            if (nameSpan) nameSpan.textContent = firstName ? `, ${firstName}` : '';
+          }
+
+          // 3. Nasconde form + intro (via classe sul wrap), mostra solo il pannello
+          if (wrap) wrap.classList.add('success');
           if (success) {
             success.classList.add('show');
-            success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Focus al pannello (per screen reader e UX tastiera)
+            setTimeout(() => {
+              success.focus({ preventScroll: true });
+              success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 50);
           }
+
+          // 4. Reset del form (anche se nascosto, in caso l'utente decida di tornare indietro)
+          demoForm.reset();
         } else {
           // Fallback: invio tradizionale (FormSubmit redirige a _next)
           demoForm.submit();
