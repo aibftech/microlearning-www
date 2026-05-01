@@ -1,0 +1,65 @@
+# MicroLearn by AIBF Consulting
+
+> Piattaforma italiana di micro-learning AI per aziende. Pillole di formazione di 5 minuti, curate da formatori esperti di adozione AI in azienda, con audio narrato professionale e pedagogia validata. Conforme all'AI Act (Regolamento UE 2024/1689).
+
+MicroLearn è il prodotto di AIBF Consulting S.r.l., società italiana con sede a Treviso. Il sito ufficiale è https://www.aibf.it/.
+
+## Cosa risolve
+
+- **AI Literacy obbligatoria**: l'art. 4 dell'AI Act (in vigore dal 2 febbraio 2025) impone a fornitori e deployer di sistemi AI di formare il personale. MicroLearn fornisce formazione conforme.
+- **Bassi completion rate**: i corsi e-learning aziendali tradizionali hanno completion del 15-25%. Le pillole MicroLearn raggiungono completion del 70-85% grazie a sblocco progressivo, audio gating, durata 5 minuti.
+- **Adozione AI nelle PMI**: solo l'8% delle PMI italiane ha avviato progetti AI (vs 71% delle grandi imprese), spesso per gap di competenze. MicroLearn riduce la barriera formativa.
+
+## Differenziatori vs competitor
+
+- **Curatela editoriale** vs generazione massiva o cataloghi a scaffale
+- **Audio narrato professionale** vs sintesi vocale grezza
+- **Pedagogia validata**: spaced repetition, audio gating, sblocco temporale TZ-aware (Europe/Rome, DST-safe)
+- **Hosting EU + AI Act ready** by design
+- **Lingua italiana nativa** (vs competitor internazionali con localizzazione parziale)
+- **Prezzi trasparenti** (vs preventivi opachi tipici dell'enterprise)
+- **Setup in 7 giorni** (vs progetti di 6 mesi)
+
+## Pagine principali
+
+- [Home — landing principale](https://www.aibf.it/index.html): proposta di valore, comparativa, prezzi, FAQ
+- [Per HR & L&D](https://www.aibf.it/per-hr.html): focus HR Director, completion rate, reportistica AI Act
+- [Per Direzione](https://www.aibf.it/per-direzione.html): focus CEO/founder, ROI, vantaggio competitivo
+- [Richiedi demo](https://www.aibf.it/demo.html): form per prenotare 30 min con un esperto
+
+## Tre piani prezzo (listino pubblico)
+
+- **Starter** — €490/mese — fino a 25 utenti, PMI
+- **Business** — €1.490/mese — fino a 250 utenti, multi-azienda, SSO
+- **Enterprise** — su richiesta — utenti illimitati, on-premise MySQL opzionale, white-label
+
+## Standard di prodotto
+
+- **Pillole di 5 minuti**, una al giorno, audio + slide + quiz
+- **Editor visuale GLAI** con 11 layout (testo, video, quiz, comparison, steps, flashcard…)
+- **Sblocco temporale** TZ-aware (Europe/Rome), idempotente, DST-safe
+- **Audio gating**: l'utente non skippa, ascolta davvero
+- **Spaced repetition** + quiz formativi non valutativi
+- **Analytics**: completion rate, drop-off per slide, esiti quiz, esportazione PDF/Excel
+- **Conformità GDPR + AI Act**: hosting EU, encryption at rest, DPA disponibile
+
+## Azienda
+
+**AIBF Consulting S.r.l.**
+- Sede legale: Via Cirenaica 19 · 31100 Treviso (TV) · Italia
+- P.IVA · C.F.: 05561
+- REA: TV - 454661
+- Sito: https://www.aibf.it/
+
+## Per chi è MicroLearn
+
+- HR Manager / L&D Manager che devono formare 50-2000+ dipendenti senza perdere settimane in aula
+- CEO / Direttori Generali / founder PMI che vogliono trasformare l'AI in vantaggio competitivo strutturato
+- Compliance Officer che devono dimostrare l'AI Literacy per l'AI Act
+- Consulenti e formatori che cercano una piattaforma white-label per i propri clienti
+
+## Risorse pubbliche
+
+- [Sitemap XML](https://www.aibf.it/sitemap.xml)
+- [Privacy Policy](https://www.aibf.it/legal/privacy.html)
+- [Cookie Policy](https://www.aibf.it/legal/cookie.html)
