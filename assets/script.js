@@ -118,17 +118,68 @@
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
   }
 
-  /* ---------- Form demo (handler simulato) ---------- */
+  /* ---------- Form demo: UTM tracking + invio FormSubmit (AJAX) ---------- */
   const demoForm = document.querySelector('#demo-form');
   if (demoForm) {
-    demoForm.addEventListener('submit', (e) => {
+    // 1. Popola i campi UTM/referrer al caricamento pagina
+    const params = new URLSearchParams(window.location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(p => {
+      const el = document.getElementById(p);
+      if (el) el.value = params.get(p) || '';
+    });
+    const refEl = document.getElementById('referrer');
+    if (refEl) refEl.value = document.referrer || 'direct';
+    const urlEl = document.getElementById('page_url');
+    if (urlEl) urlEl.value = window.location.href;
+
+    // 2. Gestione submit via fetch (AJAX) → utente resta sulla pagina con messaggio inline.
+    //    Se fetch fallisce, fallback al submit tradizionale (redirect a grazie.html via _next).
+    demoForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const success = demoForm.querySelector('.form-success');
-      // qui in produzione: fetch verso backend / Formspree / simile
-      demoForm.reset();
-      if (success) {
-        success.classList.add('show');
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      // Honeypot: se il bot ha riempito il campo nascosto, scartiamo silenziosamente
+      const honey = demoForm.querySelector('input[name="_honey"]');
+      if (honey && honey.value) {
+        // finto successo per non dare feedback al bot
+        const success = demoForm.querySelector('.form-success');
+        if (success) success.classList.add('show');
+        return;
+      }
+
+      const submitBtn = demoForm.querySelector('button[type="submit"]');
+      const origLabel = submitBtn ? submitBtn.textContent : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Invio in corso…';
+      }
+
+      try {
+        const formData = new FormData(demoForm);
+        const response = await fetch(demoForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          demoForm.reset();
+          const success = demoForm.querySelector('.form-success');
+          if (success) {
+            success.classList.add('show');
+            success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } else {
+          // Fallback: invio tradizionale (FormSubmit redirige a _next)
+          demoForm.submit();
+        }
+      } catch (err) {
+        // Fallback: invio tradizionale
+        demoForm.submit();
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = origLabel;
+        }
       }
     });
   }

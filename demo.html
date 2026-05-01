@@ -117,7 +117,30 @@
         <strong>✓ Richiesta inviata.</strong> Ti scriviamo a brevissimo per fissare la call.
       </div>
 
-      <form id="demo-form" novalidate>
+      <form id="demo-form"
+            action="https://formsubmit.co/info@aibf.it"
+            method="POST"
+            novalidate>
+
+        <!-- Configurazione FormSubmit (campi nascosti — strippati dall'email) -->
+        <input type="hidden" name="_subject" value="Nuova richiesta demo MicroLearn">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.aibf.it/grazie.html">
+        <input type="hidden" name="_autoresponse" value="Ciao, abbiamo ricevuto la tua richiesta di demo MicroLearn. Ti ricontattiamo entro 24 ore lavorative per fissare la call. — Il team AIBF Consulting">
+
+        <!-- Honeypot anti-bot: gli umani non lo vedono, i bot lo compilano e la submission viene scartata -->
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">
+
+        <!-- UTM tracking + referrer (popolati da JS) -->
+        <input type="hidden" name="utm_source" id="utm_source">
+        <input type="hidden" name="utm_medium" id="utm_medium">
+        <input type="hidden" name="utm_campaign" id="utm_campaign">
+        <input type="hidden" name="utm_term" id="utm_term">
+        <input type="hidden" name="utm_content" id="utm_content">
+        <input type="hidden" name="referrer" id="referrer">
+        <input type="hidden" name="page_url" id="page_url">
+
         <div class="form-row">
           <div class="form-group">
             <label for="name">Nome e cognome *</label>
