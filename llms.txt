@@ -29,9 +29,9 @@ MicroLearn è il prodotto di AIBF Consulting S.r.l., società italiana con sede 
 
 ## Tre piani prezzo (listino pubblico)
 
-- **Starter** — €490/mese — fino a 25 utenti, PMI
-- **Business** — €1.490/mese — fino a 250 utenti, multi-azienda, SSO
-- **Enterprise** — su richiesta — utenti illimitati, on-premise MySQL opzionale, white-label
+- **Starter** — €12 per utente/mese — fino a 50 utenti, catalogo lezioni pronte all'uso, per PMI
+- **Business** — €15 per utente/mese — fino a 250 utenti, include Editor GLAI completo + AI co-author, lezioni custom illimitate, analytics avanzata
+- **Enterprise** — su richiesta — utenti illimitati, SSO (SAML/OAuth), on-premise MySQL opzionale, white-label, SLA dedicato
 
 ## Standard di prodotto
 
