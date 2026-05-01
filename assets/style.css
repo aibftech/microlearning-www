@@ -1216,6 +1216,18 @@ section.compact { padding: 56px 0; }
 }
 .aibf-info a { color: rgba(255,255,255,0.92); text-decoration: underline; text-underline-offset: 2px; }
 .aibf-info a:hover { color: var(--white); }
+
+/* Immagini email (anti-spam) */
+.email-img {
+  display: inline-block;
+  vertical-align: -3px;
+  height: 18px;
+  width: auto;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+.aibf-info .email-img { height: 16px; vertical-align: -3px; }
 .footer h5 {
   color: var(--white);
   font-size: 13px;
