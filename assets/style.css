@@ -248,6 +248,14 @@ section.compact { padding: 56px 0; }
   font-weight: 800;
   box-shadow: var(--shadow-cta);
 }
+.brand-sub {
+  font-weight: 500;
+  color: var(--gray-500);
+  font-size: 14px;
+  margin-left: 2px;
+  letter-spacing: 0;
+}
+.footer .brand-sub { color: rgba(255,255,255,0.55); }
 
 .nav-menu {
   display: flex;
@@ -1181,6 +1189,27 @@ section.compact { padding: 56px 0; }
 .footer .brand { color: var(--white); margin-bottom: 14px; }
 .footer .brand:hover { color: var(--white); }
 .footer-tagline { font-size: 14px; line-height: 1.65; max-width: 300px; }
+.aibf-info {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.55);
+  max-width: 320px;
+}
+.aibf-info strong {
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-bottom: 4px;
+}
+.aibf-info a { color: rgba(255,255,255,0.7); }
+.aibf-info a:hover { color: var(--white); }
 .footer h5 {
   color: var(--white);
   font-size: 13px;
